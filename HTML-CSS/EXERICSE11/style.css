@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+nav {
+  background-color: hsl(218, 28%, 13%);
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5rem 3rem;
+  align-items: center;
+}
+
+nav > img {
+  width: 150px;
+  height: 100%;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  color: white;
+}
+
+header {
+  background-color: hsl(218, 28%, 13%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 10rem;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+}
+
+header > img {
+  width: 35vw;
+  /* height: 50%; */
+}
+
+header > h1 {
+  color: white;
+  width: 70%;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+header > p {
+  color: white;
+  width: 60%;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.btn {
+  width: 20%;
+  height: 50px;
+  background-color: hsl(176, 68%, 64%);
+  border-radius: 30px;
+}
+
+.elements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 5rem;
+  width: 100%;
+  gap: 4rem;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: hsl(219, 30%, 18%);
+  padding: 3rem;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
