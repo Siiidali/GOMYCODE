@@ -177,26 +177,245 @@ r(u); // do not do r(u())
 
 // 11- reference vs value
 
+const o = 2;
+const p = o;
+console.log(p);
+
+const array3 = [1, 2, 3, 4];
+const array4 = [1, 2, 3, 4];
+
+console.log(array3 == array4);
+
+const array5 = array3;
+console.log(array5 == array3);
+array3.pop();
+console.log(array3);
+console.log(array5);
+
 // 12- if-else
+
+let v = 6;
+
+if (v >= 5) {
+  console.log("v bigger then 5");
+} else if (v <= 3) {
+  console.log("v smaller then 3");
+} else {
+  console.log("v between 3 and 5");
+}
 
 // 13- Switch case
 
+switch (v) {
+  case 10:
+    console.log("v equal to 10");
+    break;
+
+  case 5:
+    console.log("v equal to 5");
+    break;
+  default:
+    console.log("v isn't 5 nor 10");
+    break;
+}
+
 // 14- ternary operator :
+
+v == 10 ? console.log("v equal to 10") : console.log("v is not equal to 10");
+
+//syntaxe :
+
+// condition ? instruction if the condition is true : instruction if the condition is false
 
 // 15- Loops
 
-// 16- Arrays methods : forEach - map - filter - reduce -
+const arr1 = [
+  { name: "sidali", age: 21 },
+  { name: "mohamed", age: 21 },
+  { name: "yasser", age: 21 },
+];
 
-// 16- Destructuring
+for (let index = 0; index < arr1.length; index++) {
+  console.log(arr1[index].name);
+}
 
-// 17- Spreading operator
+const person = {
+  name: "karim",
+  age: 20,
+};
 
-// 18- Optionnal chaining
+for (const properties in person) {
+  console.log(person[properties]);
+}
 
-// 19- Js modules
+while (v < 10 && v > 0) {
+  console.log(v);
+  v--;
+}
 
-// 20- Asynchronous JavaScript
+let booll = true;
 
-// 21- Handling errors
+do {
+  console.log(v);
+  booll = false;
+} while (booll == true);
 
-// 22-
+// 16- Arrays methods :
+
+const items = [
+  { name: "TV", price: 200 },
+  { name: "PS4", price: 100 },
+  { name: "Phone", price: 1000 },
+  { name: "Table", price: 50 },
+  { name: "Bycicle", price: 10 },
+  "heello",
+];
+
+console.log(items);
+// map : return a new array
+
+const itemsName = items.map((item) => {
+  return item.name;
+});
+
+console.log(itemsName);
+
+// forEach :
+
+const displayItems = items.forEach(function (item) {
+  console.log(item);
+});
+
+// filter :
+
+const expensivePrice = items.filter((item) => {
+  return item.price > 50;
+});
+
+console.log(expensivePrice);
+
+// reduce :
+
+const totalPrice = items.reduce((total, item) => {
+  return item.price + total;
+}, 0);
+console.log(totalPrice);
+
+// slice :
+
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+
+// splice :
+
+const months = ["Jan", "March", "April", "June"];
+
+const newMonths = months.splice(3, 1, "September", "Decamber");
+
+console.log(months);
+
+// sort :
+
+let numbers = [0, 1, 2, 50, 10, 20, 30];
+numbers.sort(function (a, b) {
+  if (a > b) return 1;
+  if (a < b) return -1;
+  return 0;
+});
+
+console.log(numbers);
+
+// concat :
+
+const newItems = items.concat([{ name: "tableau", price: 30 }]);
+
+console.log(newItems);
+
+// indexOf :
+
+const index = items.indexOf("heello");
+console.log(index);
+
+//lastIndexOf :
+
+// find :
+
+const phoneItem = items.find((item) => {
+  return item.name === "Phone";
+});
+
+console.log(phoneItem);
+
+// some :
+
+const someItems = items.some((item) => {
+  return item.price >= 100;
+});
+
+console.log(someItems);
+
+// every :
+
+const everyItems = items.every((item) => {
+  return item.price >= 100;
+});
+
+console.log(everyItems);
+
+//Array.isArray(array)
+
+Array.isArray(items); // true
+
+// 16- Destructuring and Spreading operator
+
+// with arrays :
+
+const alphabet = ["A", "B", "C", "D"];
+const numeros = [1, 2, 3, 4, 5, 6];
+
+// with objects
+
+// with function
+
+// 17- Optionnal chaining
+
+// 18- Document Object Model : DOM
+
+// the query selectors
+
+// other ways to query the dom
+
+// changing the page content
+
+// getting and setting attributes
+
+// changing css styles
+
+// adding and removing classes
+
+// events basics
+
+// creating and removing elements
+
+// 19- Asynchronous JavaScript
+
+// 20- Errors
+
+// 21-

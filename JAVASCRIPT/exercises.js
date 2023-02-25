@@ -61,7 +61,6 @@ the result confirm it using console.log():
   const pi = 3,14
 */
 //--------------------------------------------------- EXO 4 ---------------------------------------------------
-
 /*
 - Get user input using prompt(“Enter your age:”). If user is 18 or older ,
  give feedback:'You are old enough to drive'
@@ -83,27 +82,6 @@ the result confirm it using console.log():
   March, April or May, the season is Spring
   June, July or August, the season is Summer
 */
-
-//--------------------------------------------------- EXO 5 ---------------------------------------------------
-/*
-- Declare an empty array.
-- Declare an array with more than 5 number of elements.
-- Find the length of your array use arr.length
-- Get the first item, the middle item and the last item of the array.
-- Declare an array called mixedDataTypes, put different data types in the array and find the length of the array,
-  the array size should be greater than 5.
-- Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM,
-  Oracle and Amazon.
-- Print the array using console.log().
-- Print the number of companies in the array.
-- Print the first company, middle and last company.
-- Use the map method to create a new array that contains the square of each number in the original array.
-- Use the filter method to create a new array that contains only the even numbers from the original array.
-- Use the reduce method to calculate the sum of all the numbers in the original array.
-- Use the sort method to sort the elements of an array in ascending order.
-- Use the find method to find the first element in an array that satisfies a certain condition.
-*/
-
 //--------------------------------------------------- EXO 6 ---------------------------------------------------
 /*
 - Iterate 0 to 10 using for loop, do the same using while and do while loop.
@@ -125,18 +103,8 @@ the result confirm it using console.log():
 - Use for loop to iterate from 0 to 100 and print the sum of all evens
  and the sum of all odds.
 - Using the countries array, create an array for countries length'.
-  var countries = [
-    'Albania',
-    'Bolivia',
-    'Canada',
-    'Denmark',
-    'Ethiopia',
-    'Finland',
-    'Germany',
-    'Hungary',
-    'Ireland',
-    'Japan',
-    'Kenya'
+  const countries = [
+    'Albania','Bolivia', 'Canada', 'Denmark','Ethiopia','Finland', 'Germany','Hungary','Ireland','Japan','Kenya'
 ].
 - Use the countries array to create the following array of arrays:
   [
@@ -214,4 +182,24 @@ the result confirm it using console.log():
 - Create a function that takes a string as input and returns true if the string is a palindrome (i.e. reads the same forwards and backwards).
 - Create a function that takes an array of objects and a property name as input and returns an array of the property values.
 
+*/
+
+//--------------------------------------------------- EXO 5 ---------------------------------------------------
+/*
+- Declare an empty array.
+- Declare an array with more than 5 number of elements.
+- Find the length of your array use arr.length
+- Get the first item, the middle item and the last item of the array.
+- Declare an array called mixedDataTypes, put different data types in the array and find the length of the array,
+  the array size should be greater than 5.
+- Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM,
+  Oracle and Amazon.
+- Print the array using console.log().
+- Print the number of companies in the array.
+- Print the first company, middle and last company.
+- Use the map method to create a new array that contains the square of each number in the original array.
+- Use the filter method to create a new array that contains only the even numbers from the original array.
+- Use the reduce method to calculate the sum of all the numbers in the original array.
+- Use the sort method to sort the elements of an array in ascending order.
+- Use the find method to find the first element in an array that satisfies a certain condition.
 */
