@@ -390,32 +390,180 @@ Array.isArray(items); // true
 const alphabet = ["A", "B", "C", "D"];
 const numeros = [1, 2, 3, 4, 5, 6];
 
+const [v1, , v2, ...rest] = alphabet;
+console.log(v1);
+console.log(v2);
+console.log(rest);
+
+const array9 = [1, 2, 3, ...items];
+
 // with objects
+
+const table = {
+  height: 200,
+  width: 300,
+};
+
+const { height } = table; // const height = table.height
+const { width: wi } = table; // const width = table.width
+
+const { weight = 100 } = table;
+console.log(weight);
 
 // with function
 
+const ft = ({ name, ...obj }) => {
+  console.log(`hello my name is ${name} and i'm ${obj.age} years old`);
+  console.log(obj);
+};
+
+const pr = {
+  name: "sidali",
+  age: 21,
+};
+
+ft(pr);
+
 // 17- Optionnal chaining
+
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
 
 // 18- Document Object Model : DOM
 
 // the query selectors
 
+const firstDiv = document.querySelector(".name");
+
+console.log(firstDiv);
+
+const ourDiv = document.querySelectorAll(".name");
+console.log(ourDiv);
+
 // other ways to query the dom
+
+const ourDiv1 = document.getElementsByClassName("name");
+console.log(ourDiv1);
 
 // changing the page content
 
+firstDiv.innerText = "sidali";
+firstDiv.innerText = firstDiv.innerText + "sidali";
+
+ourDiv[1].innerHTML = ourDiv[1].innerHTML + "<h1>Hello 2</h1>";
+
 // getting and setting attributes
+
+const att1 = firstDiv.getAttribute("class");
+console.log(att1);
+
+firstDiv.setAttribute("id", "123");
+console.log(firstDiv.getAttribute("id"));
 
 // changing css styles
 
+firstDiv.style.backgroundColor = "red";
+// firstDiv.style.backgroundColor = "";
+
 // adding and removing classes
 
-// events basics
+firstDiv.classList.add("sidali");
+console.log(firstDiv.getAttribute("class"));
+firstDiv.classList.remove("name");
+console.log(firstDiv.getAttribute("class"));
+firstDiv.classList.toggle("alo");
+console.log(firstDiv.getAttribute("class"));
+firstDiv.classList.toggle("alo");
+console.log(firstDiv.getAttribute("class"));
 
 // creating and removing elements
 
+const newChild = document.createElement("h3");
+
+newChild.innerText = "HHEELLLOO";
+
+firstDiv.appendChild(newChild);
+
+// events basics
+
 // 19- Asynchronous JavaScript
 
-// 20- Errors
+// 1- Tableau :
 
-// 21-
+// Async code
+// Synch code
+//Single thread
+// fetching data example with sync and async
+// setTimeOut example
+
+// 2-HTTP Requests (using jsonplaceholder)
+
+// const request = new XMLHttpRequest();
+// request.open("GET", "url"); // setting up the request
+// request.send(); // send the request
+// request.addEventListener("readystatechange", () => {
+//   console.log(request, request.readyState);
+//   if(request.readyState === 4){
+//     console.log(request.responseText);
+//   }
+// });
+
+// 3- Status Codes
+
+//4- Callback functions
+
+//getTodos function
+
+// 5- JSON Data
+
+// JSON.parse();
+
+// 6- Callback Hell
+
+// many requests .
+
+// 7- Promises
+
+// const getSomething = ()=>{
+//   return new Promise((resolve,reject)=>{
+//     //fetching data
+//     resolve('some data');
+//     reject('some error')
+//   })
+// }
+
+// getSomething().then(
+//   (data) => {
+//     console.log(data);
+//   },
+//   (err) => {
+//     console.log(err);
+//   }
+// );
+
+// getSomething().then(
+//   (data) => {
+//     console.log(data);
+//   }
+// ).catch((err)=>{
+//      console.log(err);
+// })
+
+// 8- chaining promises
+
+// 9- Fetch API
+
+// 10- Async Await
+
+// 11- Throwing errors
