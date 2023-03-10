@@ -26,7 +26,14 @@ input {
   text-align: right;
   padding: 1rem;
 }
-
+label span {
+  display: none;
+}
+label span.error {
+  display: inline;
+  color: red;
+  margin-left: 1rem;
+}
 body > img {
   width: 10%;
 }
@@ -130,4 +137,23 @@ body > img {
   font-size: 1.6rem;
   font-weight: 700;
   font-family: inherit;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+  }
+  .inputs {
+    width: 100%;
+    gap: 2rem;
+  }
+  .outputs {
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .amount {
+    flex-direction: column;
+  }
 }

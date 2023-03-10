@@ -567,3 +567,7 @@ firstDiv.appendChild(newChild);
 // 10- Async Await
 
 // 11- Throwing errors
+
+// 20- Hoisting
+
+// 21- Closures
