@@ -20,13 +20,16 @@ const resetThings = () => {
   total.textContent = "$0.00";
   input_bill.value = "";
   input_people.value = "";
+  people_error.classList.remove("error");
   btns.forEach(function (btn) {
     btn.classList.remove("tip-activ");
   });
 };
 
-// activate reset btn :
+// reset button :
+reset_btn.addEventListener("click", resetThings);
 
+// activate reset btn :
 input_bill.addEventListener("change", () => {
   bill_value = Number(input_bill.value);
   number_people = Number(input_people.value);
@@ -43,15 +46,12 @@ input_bill.addEventListener("change", () => {
 input_people.addEventListener("change", () => {
   number_people = Number(input_people.value);
   if (number_people !== 0) {
-    input_people.classList.remove("error");
+    console.log(number_people);
+    people_error.classList.remove("error");
   } else if (number_people === 0) {
-    input_people.classList.add("error");
+    people_error.classList.add("error");
+    console.log(number_people);
   }
-});
-
-// reset button :
-reset_btn.addEventListener("click", () => {
-  resetThings();
 });
 
 // selecting the tip
@@ -70,6 +70,7 @@ btns.forEach((btn) => {
     });
     percent = Number(btn.textContent);
     console.log(percent);
+    // calcule
     bill_value = Number(input_bill.value);
     number_people = Number(input_people.value);
 
