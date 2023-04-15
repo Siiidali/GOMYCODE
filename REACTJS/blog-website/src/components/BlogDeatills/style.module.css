@@ -1,0 +1,10 @@
+.blog_detaills {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.blog_detaills h1 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}

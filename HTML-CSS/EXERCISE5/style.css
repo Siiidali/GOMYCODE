@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  font-family: "League Spartan", sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 4rem;
+}
+.menu {
+  display: none;
+}
+.first-part {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+.logo {
+  height: 90%;
+  width: 200px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.second-part {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.avatar {
+  width: 50px;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+  gap: 10rem;
+}
+
+.all-images {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  gap: 2rem;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.main-image > img {
+  width: 100%;
+  height: 500px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.images {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.images > img {
+  width: 130px;
+  border-radius: 3px;
+}
+
+.information {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.information > h1 {
+  font-size: 2.7rem;
+}
+
+.information > p {
+  font-size: 1.2rem;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.principal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.principal > .new-price {
+  font-size: 2.7rem;
+}
+
+.principal > .promotion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: burlywood;
+  padding: 7px 10px;
+  border-radius: 3px;
+}
+
+.old-price {
+  font-size: 1.3rem;
+  text-decoration: line-through;
+}
+.last {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  height: 40px;
+}
+.qte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 40%; */
+  gap: 2.5rem;
+  border-radius: 4px;
+  background-color: beige;
+  padding: 1rem 1.2rem;
+}
+
+.qte > img {
+  width: 15px;
+  height: 15px;
+}
+.qte > img:first-child {
+  width: 15px;
+  height: 5px;
+}
+.btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 9px;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  box-shadow: 0 10px 30px 0px darkgrey;
+}
+.btn > span {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.btn > img {
+  width: 15px;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    padding: 0 1rem;
+    margin: 0;
+  }
+  .menu {
+    display: inline;
+  }
+  ul {
+    display: none;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .images {
+    display: none;
+  }
+  .container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 1.5rem;
+  }
+  .all-images {
+    width: 100%;
+    border-radius: 0;
+  }
+  .main-image {
+    width: 100%;
+    border-radius: 0;
+  }
+  .main-image > img {
+    border-radius: 0;
+  }
+  .information {
+    width: 85vw;
+    margin: 0 auto;
+  }
+  .prices {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .last {
+    flex-direction: column;
+    height: fit-content;
+  }
+}

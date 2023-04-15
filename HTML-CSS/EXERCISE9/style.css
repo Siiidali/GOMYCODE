@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  position: relative;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+.menu {
+  display: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.motif1 {
+  position: absolute;
+  transform: translate(0px, -100px);
+  top: 0;
+  right: 0;
+  z-index: -1;
+  /* width: 50%; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+nav > ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.btn {
+  padding: 0.9rem;
+  background-color: hsl(12, 88%, 59%);
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  width: 160px;
+  box-shadow: 0px 1px 7px hsl(12, 88%, 59%);
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.header-infos {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header-infos > h1 {
+  font-size: 4.5rem;
+  color: hsl(228, 39%, 23%);
+}
+.header-stats {
+  width: 50%;
+}
+
+.text {
+  color: hsl(227, 12%, 61%);
+  width: 60%;
+}
+
+.section-1 {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 4rem;
+  gap: 5rem;
+}
+.motif2 {
+  transform: translate(-300px, 250px);
+  /* transform: rotate(20deg); */
+  position: absolute;
+  z-index: -1;
+  left: 0;
+}
+.section-1-infos {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 2rem;
+}
+
+.section-1-infos > h3 {
+  color: hsl(228, 39%, 23%);
+  font-size: 3.5rem;
+}
+.section-1-steps {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+}
+
+.step-number {
+  color: white;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(12, 88%, 59%);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+}
+
+.step-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.step-info > h5 {
+  color: hsl(228, 39%, 23%);
+  font-size: 1.1rem;
+}
+
+.text2 {
+  color: hsl(227, 12%, 61%);
+  width: 100%;
+}
+
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  margin: 10rem 0;
+  width: 100%;
+}
+.section-2 > h3 {
+  font-size: 2rem;
+  color: hsl(228, 39%, 23%);
+}
+.section-2-feedbacks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1.5rem;
+}
+.feedback {
+  background-color: hsl(0, 0%, 98%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  padding: 4rem 0;
+  border-radius: 10px;
+  text-align: center;
+}
+.feedback > h6 {
+  font-size: 1rem;
+}
+
+.feedback > img {
+  width: 80px;
+
+  position: absolute;
+  top: -20%;
+}
+
+.section-3 {
+  display: flex;
+  background-color: hsl(12, 88%, 59%);
+  /* height: 200px; */
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem 0;
+}
+.btn-2 {
+  padding: 0.9rem;
+  background-color: white;
+  border-radius: 25px;
+  color: hsl(12, 88%, 59%);
+  font-weight: 700;
+  width: 160px;
+}
+.section-3 > h2 {
+  width: 30%;
+  font-size: 3rem;
+  color: white;
+}
+
+footer {
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  padding: 3rem 10vw;
+  color: white;
+}
+
+.ul-1,
+.ul-2 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+.reseau-sociaux {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.footer-form > p {
+  font-size: 1rem;
+  width: 100%;
+}
+
+.footer-form input {
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  border-radius: 20px;
+  padding: 0 1rem;
+}
+form {
+  display: flex;
+
+  gap: 1rem;
+}
+.btn-3 {
+  padding: 0.9rem;
+  background-color: hsl(12, 88%, 59%);
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  width: 100px;
+}
+.lists {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+@media screen and (max-width: 900px) {
+  .menu {
+    display: inline-block;
+  }
+  nav > ul {
+    display: none;
+  }
+  nav > .btn {
+    display: none;
+  }
+  header {
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+    padding: 0rem 2rem;
+  }
+
+  .header-container {
+    flex-direction: column-reverse;
+  }
+
+  .header-container > img {
+    width: 100%;
+  }
+  .header-infos {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .header-infos > h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .section-1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-1-infos > h3 {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .text {
+    width: 100%;
+  }
+
+  .section-1-steps {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .section-2-feedbacks {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  .section-3 {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    font-size: 2rem;
+    padding: 1rem 0.5rem;
+  }
+  .section-3 > h2 {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    padding: 2rem 0;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .logos {
+    flex-direction: column-reverse;
+  }
+  .reseau-sociaux {
+    gap: 2rem;
+  }
+  .reseau-sociaux > img {
+    width: 40px;
+  }
+
+  .motif2 {
+    display: none;
+  }
+}

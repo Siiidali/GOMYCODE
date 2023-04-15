@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./main.js" defer></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <img src="./images/logo.svg" alt="" />
+    <div class="container">
+      <div class="inputs">
+        <div class="bill">
+          <label for="bill_input">Bill</label>
+          <input type="text" name="bill_input" id="bill_input" />
+        </div>
+        <div class="tip">
+          <span>Select Tip %</span>
+          <div class="btns">
+            <button class="btn btn-5">5</button>
+            <button class="btn btn-10">10</button>
+            <button class="btn btn-15">15</button>
+            <button class="btn btn-25">25</button>
+            <button class="btn btn-50">50</button>
+            <!-- <input type="text" /> -->
+          </div>
+        </div>
+        <div class="people">
+          <label for="people_input"
+            >Number of people<span>Can't be zero</span></label
+          >
+          <input type="text" name="people_input" id="people_input" />
+        </div>
+      </div>
+      <div class="outputs">
+        <div class="amount">
+          <div class="amount-information">
+            <span class="info-1">Tip Amount</span>
+            <span class="info-2">/ person</span>
+          </div>
+          <span class="price-1">$0.00</span>
+        </div>
+        <div class="amount">
+          <div class="amount-information">
+            <span class="info-1">Total</span>
+            <span class="info-2">/ person</span>
+          </div>
+          <span class="price-2">$0.00</span>
+        </div>
+        <button class="btn-reset" disabled>reset</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- Bill
+
+Select Tip %
+5%
+10%
+15%
+25%
+50%
+Custom
+
+Number of People
+
+Tip Amount
+/ person
+
+Total
+/ person
+
+Reset -->

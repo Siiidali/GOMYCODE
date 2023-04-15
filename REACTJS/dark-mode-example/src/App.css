@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 1rem 4rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.navBar {
+  display: flex;
+
+  padding: 3rem 8rem;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  transition: all 1s ease-in;
+}
+.navBar .light {
+}
+
+.navBar.dark {
+  color: white;
+  background-color: black;
+}
+
+.navBar .light h1 {
+}
+
+.navBar.dark button {
+  border-color: white;
+  color: black;
+  background-color: white;
+}
