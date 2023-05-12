@@ -8,6 +8,7 @@ require("dotenv").config();
 // import routes
 const todosRoutes = require("./routes/todosRoutes");
 const authRoutes = require("./routes/authRoutes");
+const verifyJWT = require("./middlewares/verifyJWT");
 // create express app
 
 const app = express();
@@ -19,8 +20,8 @@ app.use(cookieParser());
 
 // routes
 
-app.use("/api/todos", todosRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/todos", verifyJWT, todosRoutes);
 
 // connect to the database and lestining to requests
 const DB_URL = process.env.DB_URL;
