@@ -3,8 +3,6 @@ import { ThemeContext } from "../context/themeContext";
 
 export const useThemeContext = () => {
   const context = useContext(ThemeContext);
-
-  if (!context) throw Error("there is a context error");
-
+  if (!context) return new Error("context didn't work");
   return context;
 };
