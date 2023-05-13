@@ -1,12 +1,13 @@
 import { Budget } from "../models/budgetModel.js";
 import { Expense } from "../models/exprenseModel.js";
+import mongoose from "mongoose";
 
 export const getAllBudgets = async (req, res) => {
   try {
     const budgets = await Budget.find();
     if (!budgets || !budgets.length) {
       return res
-        .status(404)
+        .status(400)
         .json({ error: true, message: "There is no Budget" });
     }
     res.status(200).json({ success: true, budgets: budgets });
@@ -56,12 +57,20 @@ export const deleteBudget = async (req, res) => {
       return res.status(400).json({ error: "the budget doesn't exist" });
     }
     const theExpensesBudget = Expense.find({ budgetId: id });
-    theExpensesBudget.forEach((expense) => {
-      const deletedExpense = Expense.findByIdAndDelete(expense._id);
+    for (let index = 0; index < theExpensesBudget.length; index++) {
+      const deletedExpense = Expense.findByIdAndDelete(
+        theExpensesBudget[index].expense._id
+      );
       if (!deletedExpense) {
         return res.json({ error: "There was an error" });
       }
-    });
+    }
+    // theExpensesBudget.forEach((expense) => {
+    //   const deletedExpense = Expense.findByIdAndDelete(expense._id);
+    //   if (!deletedExpense) {
+    //     return res.json({ error: "There was an error" });
+    //   }
+    // });
     const deletedBudget = await Budget.findByIdAndDelete(id);
     if (!deletedBudget) {
       return res.json({ error: "The budget didin't be deleted" });

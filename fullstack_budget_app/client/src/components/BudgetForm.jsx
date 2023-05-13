@@ -1,6 +1,24 @@
+import { useMutation, useQueryClient } from "react-query";
+import { createBudget } from "../api/budget";
+import { useState } from "react";
+
 const BudgetForm = () => {
+  const [name, setName] = useState("");
+  const [amount, setAmount] = useState(0);
+
+  const queryClient = useQueryClient();
+  const addNewBudget = useMutation(createBudget, {
+    onSuccess: queryClient.invalidateQueries(["budgets"]),
+  });
+
   return (
-    <form className="w-3/6 flex flex-col bg-white p-6 gap-4 rounded-md drop-shadow-md ">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        addNewBudget.mutate({ name: name, amount: amount });
+      }}
+      className="flex flex-col w-3/6 gap-4 p-6 bg-white rounded-md drop-shadow-md "
+    >
       <h4 className="text-2xl font-bold">Create Budget</h4>
       <div className="flex flex-col gap-2">
         <label className="text-lg font-semibold" htmlFor="newBudget">
@@ -13,6 +31,10 @@ const BudgetForm = () => {
           id="newBudget"
           placeholder="e.g., Groceries"
           required
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -28,6 +50,10 @@ const BudgetForm = () => {
           placeholder="e.g., $350"
           required
           inputMode="decimal"
+          value={amount}
+          onChange={(e) => {
+            setAmount(e.target.value);
+          }}
         />
       </div>
       <button className="text-white bg-black w-[30%] rounded-[4px] p-2">

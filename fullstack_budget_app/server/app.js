@@ -1,6 +1,7 @@
 // import libriries
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 import morgan from "morgan";
 import * as dotenv from "dotenv";
 
@@ -19,6 +20,7 @@ const app = express();
 
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(cors());
 
 // defining routes
 app.use("/api/budget", budgetRoutes);
